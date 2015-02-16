@@ -18,9 +18,7 @@
 </body>
 
 <template name="employee">
-   <div id="login-show" style="display:none;">
-    no record found
-   </div>
+  
    <div style="margin-top:1%">
          <div class="alert alert-info" id="login-error1" style="display:none;">
     <button type="button" class="close">×</button>
@@ -131,6 +129,11 @@
 {{/each}}
 </table>
   </div>
+  <div class="record">
+   <div id="login-show" style="display:none;">
+    No Record Found
+   </div>
+   </div>
     <script>
   $(document).ready(function()
 {  
@@ -160,7 +163,7 @@ function searchTable(inputVal)
 				}
 			});
 			if(found == true)$(row).show();else $(row).hide();
-			if(found == false){
+			if(found == false ){
 			   $('#login-show').show();
 			  console.log('fail');}
 		}

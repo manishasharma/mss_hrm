@@ -1,0 +1,13 @@
+{
+"aldeed:tabular":"1.0.5*" Datatables for large or small datasets in Meteor
+aslagle:reactive-table       0.6.2* A reactive table designed for Meteor
+bootstrap                    1.0.1  Front-end framework from Twitter
+ian:accounts-ui-bootstrap-3  1.2.24* Bootstrap-styled accounts-ui with multi-language support.
+insecure                     1.0.2  Allow all database writes by default
+iron:router                  1.0.7  Routing specifically designed for Meteor
+less                         1.0.12  The dynamic stylesheet language
+meteor-platform              1.2.1  Include a standard set of Meteor packages in your app
+nemo64:bootstrap             3.3.1_1  Highly configurable bootstrap integration.
+numtel:mysql                 0.0.20* MySQL support with Reactive Select Subscriptions
+twbs:bootstrap               3.3.2  Bootstrap (official): the most popular HTML/CSS/JS framework for responsive, mobile first projects
+}
