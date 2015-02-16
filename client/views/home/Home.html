@@ -18,6 +18,9 @@
 </body>
 
 <template name="employee">
+   <div id="login-show" style="display:none;">
+    no record found
+   </div>
    <div style="margin-top:1%">
          <div class="alert alert-info" id="login-error1" style="display:none;">
     <button type="button" class="close">×</button>
@@ -157,7 +160,11 @@ function searchTable(inputVal)
 				}
 			});
 			if(found == true)$(row).show();else $(row).hide();
+			if(found == false){
+			   $('#login-show').show();
+			  console.log('fail');}
 		}
+		
 	});
 }
 $('input[type = checkbox]').change(function () {
