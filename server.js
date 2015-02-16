@@ -3,7 +3,7 @@ if (Meteor.isServer) {
   //var mysql = Npm.require('mysql');
   var db;
   var mysqlSettings = {
-    host: 'localhost',
+    host: '192.168.0.16',
     user: 'zaviour',
     password: '>6tH$zn/b*Fp8-[',
     database: 'mss_hrm'
