@@ -4,9 +4,9 @@ if (Meteor.isServer) {
   var db;
   var mysqlSettings = {
     host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'hrm'
+    user: 'zaviour',
+    password: '>6tH$zn/b*Fp8-[',
+    database: 'mss_hrm'
   };
   
 
