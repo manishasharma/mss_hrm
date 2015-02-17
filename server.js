@@ -7,6 +7,7 @@ if (Meteor.isServer) {
     user: 'zaviour',
     password: '>6tH$zn/b*Fp8-[',
     database: 'mss_hrm'
+
   };
   
 
