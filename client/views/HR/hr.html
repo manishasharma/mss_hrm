@@ -3,7 +3,7 @@
     <div class="container">
       
         <form method="post" id="hr_form">
-            <div style="margin-top:1%;width:96%;">
+            <div class="msg2">
         
          <div class="alert alert-info" id="login-error" style="display:none;">
     <button type="button" class="close">×</button>
@@ -24,9 +24,9 @@
                 </td>
                 <td >
                     
-                    <select style="margin-left:-90%;" class="form-control" placeholder="select employee name" id="res_name" >
+                    <select class="form-control res" placeholder="select employee name" id="res_name" >
                         <option value="">
-                            select Responsible Person
+                            Select Responsible Person
                         </option>
                         {{#each employee}}
                         <option {{isMyoptionSelected ename ../res_person}}>
@@ -115,15 +115,15 @@
  
    
                    
-                    <tr>
+                    <!--<tr>
                     
                         <td></td>
                         
                         <td><input type="submit" class="btn btn-info btn-lg save" value="save changes" id="submit"></td>
-                        <td><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
-                        <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
+                        <td>--><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
+                       <!-- <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
                         </td>
-                    </tr>
+                    </tr>-->
                      {{/each}}
                      {{else}}
                      
@@ -133,9 +133,9 @@
                 </td>
                 <td>
                     
-                    <select style="margin-left:-101%;" class="form-control" placeholder="select employee name" id="res_name" >
+                    <select class="form-control res" placeholder="select employee name" id="res_name" >
                         <option  value="">
-                            select employee name
+                            Select Responsible Person
                         </option>
                         {{#each employee}}
                         <option {{isMyoptionSelected ename ../res_person}}>
@@ -221,14 +221,14 @@
  
    
                    
-                    <tr>
+                    <!--<tr>
                     
                         <td></td>
                        <td><input type="submit" class="btn btn-info btn-lg save" value="save changes" id="submit"></td>
-                        <td><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
-                        <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
+                        <td>--><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
+                       <!-- <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
                         </td>
-                    </tr>
+                    </tr>-->
                 {{/if}}
                      
                      

@@ -2,6 +2,10 @@ Router.route('/', function () {
   this.render('employee');
   
 })
+Router.route('/initiate', function () {
+  this.render('relieving');
+  
+})
 
 Router.route('tabs', {
     path: '/tabs/:_id',

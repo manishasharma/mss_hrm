@@ -4,7 +4,7 @@
     
     <div style="margin-top:1%; width:96%">
          <div class="alert alert-info" id="login-error1" style="display:none;">
-    <button type="button" class="close" style=margin-right:3%;>×</button>
+    <button type="button" class="close" style="margin-right:3%;">×</button>
     please select Responsible Person
 </div>
                 </div>
@@ -12,7 +12,7 @@
         </div>
      {{#if documentdocs}}
      {{#each documentdocs}}
-            <div style="margin-left:20%;margin-top:4%;">
+            <div class="res1">
             <tr>
                 <td>
                     Responsible Person :
@@ -20,7 +20,7 @@
                 <td>
                     <select class="form-control" placeholder="select employee name" id="res_name">
                         <option value="">
-                            select employee name
+                           Select Responsible Person
                         </option>
                            {{#each employee}}
                         <option {{isMyoptionSelected ename ../res_person}}>
@@ -303,16 +303,16 @@
                         <td><input type="hidden" value="{{eid}}" id="empid"></td>
                     {{/each}}
                     </tr>
-                <tr>
+               <!-- <tr>
                         <td></td>
                         <td><input type="submit" class="btn btn-info btn-lg save2" value="save" ></td>
                         <td><a href="../"><button type="button" class="btn btn-info btn-lg back2 ">back</button></a></td>
-                    </tr>
+                    </tr>-->
               
         </table>
           {{/each}}
           {{else}}
-          <div style="margin-left:20%;margin-top:4%;">
+          <div class="res1">
                     <tr>
                 <td>
                     Responsible Person :
@@ -320,7 +320,7 @@
                 <td>
                     <select class="form-control" placeholder="select employee name" id="res_name">
                         <option value="">
-                            select employee name
+                            Select Responsible Person
                         </option>
                            {{#each employee}}
                         <option >
@@ -372,8 +372,8 @@
                 <td>
                     <div class="col-xs-3 col-sm-2 col-md-2">
                     <div class="onoffswitch">
-                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ3" id="Address" >
-                    <label class="onoffswitch-label" for="Address">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ3" id="Address1" >
+                    <label class="onoffswitch-label" for="Address1">
                          <span class="onoffswitch-inner"></span>
                  <span class="onoffswitch-switch"></span>
                 </label>
@@ -594,11 +594,11 @@
                         <td><input type="hidden" value="{{eid}}" id="empid"></td>
                     {{/each}}
                     </tr>
-                <tr>
+                <!--<tr>
                         <td></td>
                          <td><input type="submit" class="btn btn-info btn-lg save2" value="save" ></td>
                         <td><a href="../"><button type="button" class="btn btn-info btn-lg back2 ">back</button></a></td>
-                    </tr>
+                    </tr>-->
         </table>
           {{/if}}
           

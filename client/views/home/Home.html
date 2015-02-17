@@ -19,36 +19,14 @@
 
 <template name="employee">
   
-   <div style="margin-top:1%">
+   <div class="msg">
          <div class="alert alert-info" id="login-error1" style="display:none;">
     <button type="button" class="close">×</button>
     please select employee
 </div>
             </div>
-<!--  <div class="container">
-      <div class="employee_div">
-<div  class="form-group" style="margin-top:80px;">
-  <label>Employee Name</label>
-<select class="form-control" placeholder="select employee name" id="ename">
-  <option>select employee name</option>
-  {{#each employee}}
-  <option>{{ename}}</option>
-  <input type="hidden" value="{{eid}}" class="{{ename}}">
-  {{/each}}
-</select>
-
-<button class="btn btn-info btn-lg" id="init_join">
-  <span class="glyphicon glyphicon-search">Intiate Joining</span>
-  
-
-</button>
-<button class="btn btn-warning margin_top">Initiate Relieving</button>
-</div>
-</div>-->
-
-  
-  
-     <div class="col-md-4" style="margin-left:32%; margin-top:4%;">
+ 
+     <div class="col-md-4 col1">
       <div class="col-md-4">
   
   </div>
@@ -65,11 +43,11 @@
       </select>
       </div>
       <div>
-        <button class="btn btn-info btn-lg" id="init_join" style="width:42%;">
+        <button class="btn btn-info btn-lg init" id="init_join">
           <span class=""></span>
           Intiate Joining
         </button>
-        <button class="btn btn-info btn-lg">
+        <button class="btn btn-info btn-lg" id="relieving">
          <span class=""></span>
          Intiate Relieving
         </button>
@@ -80,7 +58,7 @@
   <label for="search">
 			
 		</label>
-		<input style="height:2%" type="text" placeholder="Search By employee ID, Name" id="search" />
+		<input class="search1" type="text" placeholder="Search By employee ID, Name" id="search" />
                 </div>
                
   
@@ -114,7 +92,7 @@
   <h4 class="border">Employee Status</h4>
     <table class="table table-bordered tb" id="tblData">
       <tr>
-<th>Employee Id</th><th>Employee Name</th><th>Pending Section</th><th>Status</th><th>Action</th>
+<th> Employee ID</th><th>Employee Name</th><th>Pending Section?</th><th>Status</th><th>Action</th>
 
 </tr>
 {{#each employname}}
@@ -123,7 +101,7 @@
 <td>{{ename}}</td>
 <td>{{doc_status eid}}</td>
 <td>{{pending eid}}{{status eid}}</td>
-<td><button class="btn btn-info btn-lg view" id="action" style=" line-height: 0.55;"> <span class="glyphicon"></span>View</button>
+<td><button class="btn btn-info btn-lg view" id="action"> <span class="glyphicon"></span>View</button>
 </td>
 </tr>
 {{/each}}
@@ -140,6 +118,12 @@
 	$('#search').keyup(function()
 	{
 		searchTable($(this).val());
+		if(!$('.num1h').length){
+		  $('#login-show').show();
+		  //alert("record");
+		}else{
+		  $('#login-show').hide();
+		}
 	});
 });
 
@@ -151,24 +135,35 @@ function searchTable(inputVal)
 	{
 		var allCells = $(row).find('td');
 		if(allCells.length > 0)
-		{
+		{ 
 			var found = false;
 			allCells.each(function(index, td)
 			{
 				var regExp = new RegExp(inputVal, 'i');
 				if(regExp.test($(td).text()))
 				{
+				 
 					found = true;
 					return false;
 				}
+				
 			});
-			if(found == true)$(row).show();else $(row).hide();
-			if(found == false ){
-			   $('#login-show').show();
-			  console.log('fail');}
+			if(found == true){
+			  $(row).show();
+			  $(row).addClass("num1h");
+			  }
+			else {
+			  $(row).hide();
+			  $(row).removeClass("num1h");
+			//$('#login-show').show();
+			
+			}
 		}
 		
+	
+		
 	});
+	 
 }
 $('input[type = checkbox]').change(function () {
     var valu = $(this).val();
@@ -179,8 +174,10 @@ $('input[type = checkbox]').change(function () {
     if( ischecked ){
         $('.checkbox1').hide();
 	   $('.' + valu).show();
+	   //$('.checkbox1').addClass("num1");
     }else{
         $('.checkbox1').show();
+	//$('.checkbox1').addClass("num");
     }
   
 })

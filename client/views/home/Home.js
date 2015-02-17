@@ -5,7 +5,7 @@ Template.employee.events({
     console.log(emp_name);
     var emp_id = template.find('#empid').value.trim();
     if (emp_name == "---Select Employee--") {
-      alert("manisha");
+    
    
        $('#login-error1').show();
        $('.alert .close').on('click', function(e) {
@@ -72,15 +72,13 @@ Template.employee_document_table.helpers({
      Meteor.call('doc_pending',id,function(err,res){
              
             if (err) {
-                // alert("manisha");
+              
                  }
                  else{
-                   // console.log("document",id, res);
+                  res1 = res.replace(/^[,\s]+|[,\s]+$/g, '');
                       if (res) {
-                        //console.log("doc_pending",res);
-                          Session.set('doc_of_'+id, res);         
-                          //res( 'complete' );        
-                      }
+                        Session.set('doc_of_'+id, res1);         
+                       }
                 
                  }        
             });

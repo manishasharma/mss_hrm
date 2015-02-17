@@ -3,9 +3,9 @@ if (Meteor.isServer) {
   //var mysql = Npm.require('mysql');
   var db;
   var mysqlSettings = {
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
+    host: '112.196.35.195',
+    user: 'zaviour',
+    password: '>6tH$zn/b*Fp8-[',
     database: 'hrm'
   };
   
@@ -286,7 +286,7 @@ if (Meteor.isServer) {
       }
     
        else{
-        var a="hr_document ";
+        var a="hr_document, ";
        }
       
     
@@ -298,7 +298,7 @@ if (Meteor.isServer) {
       }
     
        else{
-        var b="document ";
+        var b="document, ";
        }
     //length2= result2.length;
     query3="select * from rbd where emp_id = "+id+" and ans1='on' and ans2='on'and ans3='on'";
@@ -308,7 +308,7 @@ if (Meteor.isServer) {
       }
     
        else{
-        var c = "rbd ";
+        var c = "rbd, ";
        }
       
     
@@ -320,7 +320,7 @@ if (Meteor.isServer) {
       }
     
        else{
-        var d="network ";
+        var d="network, ";
        }
         var e=" ";
         if (a==e && b==e && c==e && d==e) {
